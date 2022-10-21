@@ -13,15 +13,23 @@
     <script src="js/ammo.js"></script>
     <script>
 
-        //variable declaration
+        //declracion de variables
         let physicsWorld;
         let physicsWorld, scene, camera, renderer;
+        rigidBodies = [], tmpTrans;
 
-        //Ammojs Initialization
+        //Inicializacion Ammo
         Ammo().then( start )
 
         function start() {
+            tmpTrans = new Ammo.btTransform();
             setupPhysicsWorld();
+            setupPhysicsObjects();
+            setupGraphics();
+            createBlock;
+            createBall;
+            renderFrame();
+
 
                 //code goes here
 
